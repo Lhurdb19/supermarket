@@ -1,0 +1,66 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.custom-loader {
+  width: 20px;
+  height: 20px;
+  display: grid;
+}
+.custom-loader::before,
+.custom-loader::after {    
+  content:"";
+  grid-area: 1/1;
+  --c: radial-gradient(farthest-side,#766DF4 92%,#0000);
+  background: 
+    var(--c) 50%  0, 
+    var(--c) 50%  100%, 
+    var(--c) 100% 50%, 
+    var(--c) 0    50%;
+  background-size: 6px 6px;
+  background-repeat: no-repeat;
+  animation: s2 1s infinite;
+}
+.custom-loader::before {
+margin:0px;
+filter:hue-rotate(45deg);
+background-size: 4px 4px;
+animation-timing-function: linear
+}
+
+@keyframes s2{ 
+100%{transform: rotate(.5turn)}
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Adamina&display=swap");
+
+/* svg {
+	font-family: "Adamina", sans-serif;
+	width: 100%;
+  height: 30px;
+} */
+svg text {
+  background-color: red;
+	animation: stroke 4s infinite alternate;
+	stroke-width: 2;
+	stroke: #C4C12F;
+	font-size: 35px;
+  transform: translateX(50%);
+}
+
+@keyframes stroke {
+	0%   {
+		fill: rgba(39,204,153,0); stroke: rgba(196,193,47,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(39,204,153,0); stroke: rgba(196,193,47,1); }
+	80%  {fill: rgba(39,204,153,0); stroke: rgb(247, 247, 243); stroke-width: 3; }
+	100% {
+		fill: rgba(39,204,153,1); stroke: rgba(196,193,47,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
