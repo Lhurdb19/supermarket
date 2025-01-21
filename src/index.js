@@ -4,15 +4,21 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import { FavoritesProvider } from "./Routes/FavoriteData/favoritecontext";
+import { CartProvider } from "./CartContext/cartContext";
 import { AuthProvider } from "./ContentApi/AuthContextApi";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <AuthProvider>
-        <App />
-      </AuthProvider>
+      <FavoritesProvider>
+        <CartProvider>
+          <AuthProvider>
+            <App />
+          </AuthProvider>
+        </CartProvider>
+      </FavoritesProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

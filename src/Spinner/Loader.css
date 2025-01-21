@@ -48,8 +48,18 @@ svg text {
 	animation: stroke 4s infinite alternate;
 	stroke-width: 2;
 	stroke: #C4C12F;
-	font-size: 35px;
-  transform: translateX(50%);
+	font-size: 28px;
+  transform: translateX(51%);
+}
+@media screen and (max-width:896px) {
+  svg text {
+    background-color: red;
+    animation: stroke 4s infinite alternate;
+    stroke-width: 2;
+    stroke: #C4C12F;
+    font-size: 18px;
+    transform: translateX(37%);
+  }
 }
 
 @keyframes stroke {
