@@ -41,7 +41,7 @@ export const foodStuff = [
       {
         'id': 4,
         'name': "Corn Flakes",
-        'price': "40.54",
+        'price': 40.54,
         'image': [
             "https://media02.stockfood.com/largepreviews/NDE3MjIwMDQx/13458711-Corn-flakes-cereal-in-a-bowl.jpg",
             "https://i5.walmartimages.com/seo/Great-Value-Toasted-Corn-Flakes-Breakfast-Cereal-18-oz_26e91182-39a1-4cad-be0b-d4488d9096ee.aafb1f587087e3422a3bdde4d3f715a7.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
@@ -54,7 +54,7 @@ export const foodStuff = [
       {
         'id': 5,
         'name': "Corn Seed",
-        'price': "60.70",
+        'price': 60.70,
         'image': [
             "https://vmpetsmart.com/wp-content/uploads/2022/10/61W6ai1WbcL._SL1000_.jpg",
             "https://www.keshrinandan.com/wp-content/uploads/2015/08/ke_maize_nutrition.jpg",
@@ -67,7 +67,7 @@ export const foodStuff = [
       {
         'id': 6,
         'name': "Guinea Corn",
-        'price': "72.00",
+        'price': 72.00,
         'image': [
             "https://pbs.twimg.com/media/GOaAPCcWwAAToD6.jpg:large",
             "https://5.imimg.com/data5/SELLER/Default/2023/6/317228311/OF/GG/EN/41032038/natural-jowar-500x500.webp",
@@ -80,7 +80,7 @@ export const foodStuff = [
       {
         'id': 7,
         'name': "Golden Morn",
-        'price': "45.50",
+        'price': 45.50,
         'image': [
             "https://static.wixstatic.com/media/bec25e_7f69a513c5134b52b59a59dc764d0f0e~mv2.jpg/v1/fill/w_980,h_970,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/bec25e_7f69a513c5134b52b59a59dc764d0f0e~mv2.jpg",
             "https://www.nigerianstore.com/cdn/shop/products/Nestle_Golden_Morn.jpg?v=1723062274",
@@ -93,7 +93,7 @@ export const foodStuff = [
       {
         'id': 8,
         'name': "Soya Beans",
-        'price': "54.55",
+        'price': 54.55,
         'image': [
             "https://www.perthorganics.com/assets/full/SoyBean1kg.jpg?20221227104116",
             "https://www.ing.com/upload/78669e53-ccb6-46dd-8812-d11db6b4d77a_soya-bean-field_1200x675.png",
@@ -132,7 +132,7 @@ export const foodStuff = [
       {
         'id': 11,
         'name': "Palm Oil",
-        'price': "34.00",
+        'price': 34.00,
         'image': [
             "https://m.media-amazon.com/images/I/61Jya28MSOL._AC_UF894,1000_QL80_.jpg",
             "https://imgcdn.stablediffusionweb.com/2024/9/18/e873abe4-aec7-442f-a0f6-806a1462172d.jpg",

@@ -1,0 +1,71 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: MontserratLight;
+    src: url(/src/Assets/Montserrat-Light.ttf);
+  }
+  @font-face {
+    font-family: MontserratBold;
+    src: url(/src/Assets/Montserrat-Bold.ttf);
+  }
+
+  
+  
+.footer-component {
+    width: 100%;
+    min-height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    background-color: #006F1C;
+  }
+  
+  @media screen and (max-width:896px) {
+    .footer-component {
+      width: 100%;
+      min-height: 100px;
+    }
+  }
+  
+  .footer-component > .counter-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .counter-container > .count-box {
+    color: white;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .count-box > h1 {
+    font-size: 25px;
+  }
+  .count-box > h2 {
+    font-size: 15px;
+  }
+  @media screen and (max-width:896px) {
+    .footer-component > .counter-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .counter-container > .count-box {
+      color: white;
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  

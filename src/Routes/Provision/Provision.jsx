@@ -1,11 +1,16 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { bestProducts } from '../Jsons/bestProduct';
-import { CartContext } from '../CartContext/cartContext';
+import { bestProducts } from '../../Jsons/bestProduct';
+import { CartContext } from '../../CartContext/cartContext';
+import { useFavorites } from '../FavoriteData/favoritecontext';
+import { MdFavorite } from "react-icons/md";
+import { MdFavoriteBorder } from "react-icons/md";
 import { ToastContainer, toast } from 'react-toastify';
+import './Provision.css';
 
 export default function Provision() {
   const { addItemToCart } = useContext(CartContext); // Access addItemToCart correctly
+  const { addToFavorites, removeFromFavorites, isFavorite } = useFavorites();
   const notifyAdd = () => toast.success("Product added successfully to cart!");
 
 
@@ -17,6 +22,16 @@ export default function Provision() {
   const filteredProvisions = bestProducts.filter((provision) =>
     provision.name.toLowerCase()
   );
+
+  const handleAddFavorites = (item) => {
+    if(!isFavorite(item.id)) {
+      addToFavorites(item);
+      toast.success("Product added to favorites!")
+    } else {
+      removeFromFavorites(item.id);
+      toast("Product removed from favorites!")
+    }
+  }
   
   return (
     <div className='provision-component'>
@@ -38,6 +53,7 @@ export default function Provision() {
                   : ''}
               </h4>
               <p>In stock: {provision.inStock === 'Yes' ? 'Available' : 'Out of stock' }</p>
+              <button style={{border: 'none', cursor: 'pointer', fontSize:'17px'}} onClick={() => handleAddFavorites(provision)}>{isFavorite(provision.id) ? <MdFavorite /> : <MdFavoriteBorder />}</button>
               <div className="btn">
                 <button onClick={() => handleAddToCart(provision)}
                   disabled={provision.inStock === 'No'}>

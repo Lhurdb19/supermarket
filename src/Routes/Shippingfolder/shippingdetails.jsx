@@ -1,6 +1,7 @@
 import React from 'react';
 import useFormData from '../../Libs/useFormData';
 import { useNavigate } from 'react-router-dom';
+import './Shipping.css';
 
 export default function Shippingdetails() {
     const [formData, handleChange] = useFormData('shippingdetail');

@@ -1,0 +1,420 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: MontserratLight;
+    src: url(/src/Assets/Montserrat-Light.ttf);
+  }
+  @font-face {
+    font-family: MontserratBold;
+    src: url(/src/Assets/Montserrat-Bold.ttf);
+  }
+
+
+
+.shipping-detail {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 100px;
+  }
+  
+  .frame {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .circle-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  .circle-1 > h5 {
+    color: #006F1C;
+  }
+  .frame > .circle-1 > .box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #006F1C;
+    color: white;
+  }
+  
+  .circle-1 > p {
+    width: 60px;
+    left: 66px;
+    border: 3px solid #006F1C;
+    position: absolute;
+    bottom: 32px;
+  }
+  
+  
+  .circle-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .frame > .circle-2 > .box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #006F1C;
+  }
+  
+  .circle-2 > h6 {
+    width: 65px;
+    height: 5px;
+    right: 66px;
+    border-top: 1px solid #006F1C;
+    border-bottom: 1px solid #006F1C;
+    position: absolute;
+    bottom: 32px;
+  }
+  .circle-2 > p {
+    width: 65px;
+    height: 5px;
+    left: 66px;
+    border-top: 1px solid #006F1C;
+    border-bottom: 1px solid #006F1C;
+    position: absolute;
+    bottom: 32px;
+  }
+  
+  .circle-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  .circle-3 > p {
+    width: 60px;
+    height: 5px;
+    right: 66px;
+    border-top: 1px solid #006F1C;
+    border-bottom: 1px solid #006F1C;
+    position: absolute;
+    bottom: 32px;
+  }
+  
+  .frame > .circle-3 > .box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #006F1C;
+  }
+  
+  .second-circle-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .second-circle-2 > h5 {
+    color: #006F1C;
+  }
+  
+  .frame > .second-circle-2 > .box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #006F1C;
+    color: white;
+  }
+  
+  .second-circle-2 > h6 {
+    width: 65px;
+    right: 60px;
+    border: 3px solid #006F1C;
+    position: absolute;
+    bottom: 32px;
+  }
+  .second-circle-2 > p {
+    width: 60px;
+    height: 5px;
+    left: 60px;
+    border: 3px solid #006F1C;
+    position: absolute;
+    bottom: 32px;
+  }
+  
+  .second-circle-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .third-circle-3 > h5 {
+    color: #006F1C;
+  }
+  
+  .second-circle-3 > p {
+    width: 60px;
+    height: 5px;
+    right: 66px;
+    border-top: 1px solid #006F1C;
+    border-bottom: 1px solid #006F1C;
+    position: absolute;
+    bottom: 32px;
+  }
+  
+  .frame > .second-circle-3 > .box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #006F1C;
+    /* background-color: #2aa0bd; */
+  }
+  
+  .third-circle-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  .third-circle-3 > p {
+    width: 60px;
+    height: 5px;
+    right: 66px;
+    background-color: #006F1C;
+    position: absolute;
+    bottom: 32px;
+  }
+  
+  .frame > .third-circle-3 > .box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #006F1C;
+    color: white;
+  }
+  
+  
+  .shipping-detail > form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(209, 220, 226, 0.7);
+    border-radius: 5px;
+  }
+  
+  .shipping-detail > form > .first {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .shipping-detail > form > .first > .label-input {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .label-input > input {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+  
+  .shipping-detail > form > button {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: none;
+    color: white;
+    font-size: 17px;
+    background-color: #006F1C;
+    border-radius: 5px;
+  }
+  
+  .shipping-detail > form > .address-input {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .address-input > input {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+  
+
+  .shipping-data {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 50px;
+  }
+  
+  .location-detail {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 100px;
+  }
+  
+  .location-detail > form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(169, 199, 217, 0.7);
+  }
+  
+  .location-detail > form > .second {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .label-input {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .button-con {
+    width: 200px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .button-con > button {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: none;
+    color: white;
+    font-size: 17px;
+    background-color: #006F1C;
+    border-radius: 5px;
+  }
+  
+  .payment-detail {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 100px;
+  }
+  
+  .payment-detail > form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(169, 199, 217, 0.7);
+  }
+  
+  .payment-detail > form > .third {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .btn-con {
+    width: 300px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .btn-con > button {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: none;
+    color: white;
+    font-size: 17px;
+    background-color: #006F1C;
+    border-radius: 5px;
+  }
+  

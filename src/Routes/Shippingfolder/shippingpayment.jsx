@@ -3,13 +3,15 @@ import { useNavigate } from "react-router-dom";
 import useFormData from "../../Libs/useFormData";
 import useFormLocation from "../../Libs/useFormLocation";
 import usePaymentForm from "../../Libs/useFormPayment";
+import './Shipping.css';
 
 export default function Shippingpayment() {
   const navigate = useNavigate();
   const [formData] = useFormData("shippingdetail");
   const [locationForm] = useFormLocation("locationdetail");
   const [paymentForm, handlePaymentChange] = usePaymentForm("paymentdetail");
-  const [isFormComplete, setIsFormComplete] = useState(false)
+  const [isFormComplete, setIsFormComplete] = useState(false);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();

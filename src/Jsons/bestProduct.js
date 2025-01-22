@@ -1,6 +1,6 @@
 export const bestProducts = [
   {
-    id: 1,
+    id: 21,
     name: 'Eggs',
     price: 45.10,
     image: "https://i.ibb.co/nwPRWXk/Egg-baking-removebg-preview.png",
@@ -10,7 +10,7 @@ export const bestProducts = [
   },
 
   {
-    id: 2,
+    id: 22,
     name: "Lime",
     price: 24.10,
     image: "https://i.ibb.co/8DC4W8S/lime-removebg-preview.png",
@@ -19,7 +19,7 @@ export const bestProducts = [
   },
 
   {
-    id: 3,
+    id: 23,
     name: "Green Beans",
     price: 35.20,
     image: "https://i.ibb.co/BKzv7YW/green-beans-r3-removebg-preview.png",
@@ -28,7 +28,7 @@ export const bestProducts = [
   },
 
   {
-    id: 4,
+    id: 24,
     name: "Watermelon",
     price: 50.20,
     image: "https://i.ibb.co/2ymkTR1/watermelon-removebg-preview.png",
@@ -37,7 +37,7 @@ export const bestProducts = [
   },
 
   {
-    id: 5,
+    id: 25,
     name: "Ripe Pepper",
     price: 30.40,
     image: "https://i.ibb.co/wpfdZWn/images-removebg-preview.png",
@@ -46,7 +46,7 @@ export const bestProducts = [
   },
 
   {
-    id: 6,
+    id: 26,
     name: "Tomatoes",
     price: 20.50,
     image: "https://i.ibb.co/LNt60Rc/tomatoes-removebg-preview.png",
@@ -55,7 +55,7 @@ export const bestProducts = [
   },
 
   {
-    id: 7,
+    id: 27,
     name: "Spices Blend",
     price: 54.20,
     image: "https://i.ibb.co/WycL1Yr/spices-removebg-preview-1.png",
@@ -64,7 +64,7 @@ export const bestProducts = [
   },
 
   {
-    id: 8,
+    id: 28,
     name: "Vegetable Seasoning",
     price: 30.05,
     image: "https://i.ibb.co/ft9LjMK/vegetarian-seasoning-cubes-removebg-preview.png",
@@ -73,7 +73,7 @@ export const bestProducts = [
   },
 
   {
-    id: 9,
+    id: 29,
     name: "Sachet Milo",
     price: 20.05,
     image: "https://i.ibb.co/XZKDxys/Beverage-Sachet-Milo-800-G-3099-99-removebg-preview.png",
@@ -82,7 +82,7 @@ export const bestProducts = [
   },
 
   {
-    id: 10,
+    id: 30,
     name: "Tin Peak Milk Powder",
     price: 43.1,
     image: "https://i.ibb.co/TWSjpLq/peak-milk-removebg-preview.png",
@@ -91,7 +91,7 @@ export const bestProducts = [
   },
 
   {
-    id: 11,
+    id: 31,
     name: "Frozen Fish",
     price: 26.20,
     image: "https://i.ibb.co/LkH960G/frozen-fish-removebg-preview.png",
@@ -100,7 +100,7 @@ export const bestProducts = [
   },
 
   {
-    id: 12,
+    id: 32,
     name: "Cereals Grains",
     price: 40.05,
     image: "https://i.ibb.co/4SCWzRn/cereal-grains-removebg-preview.png",
@@ -109,7 +109,7 @@ export const bestProducts = [
   },
 
   {
-    id: 13,
+    id: 33,
     name: "Evaporated Peak Milk",
     price: 62.40,
     image: "https://i.ibb.co/JdpZfMT/liquid-milk-removebg-preview.png",
@@ -118,7 +118,7 @@ export const bestProducts = [
   },
 
   {
-    id: 14,
+    id: 34,
     name: "Refill Bournvita",
     price: 45.30,
     image: "https://i.ibb.co/x2p41vT/Bournvita-removebg-preview.png",
@@ -127,7 +127,7 @@ export const bestProducts = [
   },
 
   {
-    id: 15,
+    id: 35,
     name: "Carrots",
     price: 43.05,
     image: "https://i.ibb.co/NK8VbcV/carrots-removebg-preview.png",
@@ -136,7 +136,7 @@ export const bestProducts = [
   },
 
   {
-    id: 16,
+    id: 36,
     name: "Tin Nestle Milo",
     price: 29.10,
     image: "https://i.ibb.co/Js9msn5/milo-removebg-preview.png",
@@ -145,7 +145,7 @@ export const bestProducts = [
   },
 
   {
-    id: 17,
+    id: 37,
     name: "Refill Peak Milk",
     price: 30.20,
     image: "https://i.ibb.co/GtFcPFk/Refill-peak-milk-removebg-preview.png",
@@ -154,7 +154,7 @@ export const bestProducts = [
   },
 
   {
-    id: 18,
+    id: 38,
     name: "Maize Grains",
     price: 43.30,
     image: "https://i.ibb.co/9w6BSTV/png-clipart-cereal-maize-grain-corn-food-whole-grain-removebg-preview.png",
@@ -163,7 +163,7 @@ export const bestProducts = [
   },
 
   {
-    id: 19,
+    id: 39,
     name: "Cadbury Bournvita",
     price: 35.05,
     image: "https://i.ibb.co/rvQXd21/Cadbury-Bournvita-removebg-preview.png",

@@ -1,0 +1,408 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: MontserratLight;
+    src: url(/src/Assets/Montserrat-Light.ttf);
+  }
+  @font-face {
+    font-family: MontserratBold;
+    src: url(/src/Assets/Montserrat-Bold.ttf);
+  }
+
+  
+.home-component {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 70px;
+  }
+  @media screen and (max-width:896px) {
+    .home-component {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
+  .organic-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .organic-healthy-farm-container {
+    width: 750px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+  @media screen and (max-width:896px) {
+    .organic-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+      padding: 50px 0px;
+    }
+    
+    .organic-healthy-farm-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
+  .organic-con {
+    width: 100%; 
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: #006F1C;
+    border-radius: 15px;
+  }
+  .organic-con > .text {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .organic-con > .text > h4 {
+    font-size: 20px;
+    color: #FF9E22;
+    font-family: MontserratLight;
+  }
+  .organic-con > .text > h2 {
+    font-size: 40px;
+    color: #fff;
+    font-family: MontserratLight;
+  }
+  .organic-con > .text > p {
+    font-size: 15px;
+    color: #fff;
+    font-family: MontserratLight;
+  }
+  
+  .organic-con > img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  @media screen and (max-width:896px) {
+    .organic-con {
+      width: 100%; 
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #006F1C;
+      border-radius: 15px;
+      padding: 10px;
+    }
+    .organic-con > .text {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .organic-con > .text > h4 {
+      font-size: 15px;
+      color: #FF9E22;
+      font-family: MontserratLight;
+    }
+    .organic-con > .text > h2 {
+      font-size: 20px;
+      color: #fff;
+      font-family: MontserratLight;
+    }
+    .organic-con > .text > p {
+      font-size: 12px;
+      color: #fff;
+      font-family: MontserratLight;
+    }
+    
+    .organic-con > img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+    }
+  }
+  
+  .healthy-farm-container {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .healthy-con {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    background-color: #FF8989;
+    border-radius: 15px;
+    padding: 0px 20px;
+  }
+  
+  .healthy-con > .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .healthy-con > .text > h3 {
+    font-size: 30px;
+    font-family: MontserratLight;
+    color: #fff;
+  }
+  .healthy-con > .text > a {
+    background-color: #006F1C;
+    padding: 10px;
+    font-size: 13px;
+    color: white;
+    border-radius: 10px;
+    font-family: MontserratLight;
+  }
+  .healthy-con > .text > a:hover {
+    background-color: #fff;
+    color: #006F1C;
+  }
+  
+  .healthy-con > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width:896px) {
+    .healthy-farm-container {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .healthy-con {
+      width: 100%;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0px;
+    }
+    
+    .healthy-con > .text {
+      display: flex;
+      position: absolute;
+      transform: translateY(90px);
+      z-index: 10;
+      gap: 10px;
+    }
+    
+    .healthy-con > img {
+      width: 90%;
+      position: relative;
+    }
+  }
+  
+  .farm-con {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #36DDE9;
+    border-radius: 15px;
+    padding: 20px;
+  }
+  
+  .farm-con > .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .farm-con > .text > h3 {
+    font-size: 30px;
+    font-family: MontserratLight;
+    color: #fff;
+  }
+  .farm-con > .text > a {
+    background-color: #006F1C;
+    padding: 10px;
+    font-size: 13px;
+    color: white;
+    border-radius: 10px;
+    font-family: MontserratLight;
+  }
+  .farm-con > .text > a:hover {
+    background-color: #fff;
+    color: #006F1C;
+  }
+  
+  .farm-con > img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media screen and (max-width:896px) {
+    .farm-con {
+      width: 100%;
+      height: 320px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 20px;
+      position: relative;
+    }
+    
+    .farm-con > .text {
+      position: absolute;
+      margin-bottom: 20px;
+    }
+    
+    .farm-con > img {
+      width: 90%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  
+  .fruit-species-container {
+    width: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+  @media screen and (max-width:896px) {
+    .fruit-species-container {
+      width: 100%;
+      display: flex;
+      gap: 20px;
+    }
+  }
+  
+  .fruit-con {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #FF9E22;
+    border-radius: 15px;
+  }
+  
+  .fruit-con > .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    position: absolute;
+    z-index: 101;
+    margin-top: 200px;
+  }
+  .fruit-con > .text > h3 {
+    font-size: 25px;
+    font-family: MontserratLight;
+    color: #fff;
+  }
+  .fruit-con > .text > a {
+    background-color: #006F1C;
+    padding: 10px;
+    font-size: 13px;
+    color: white;
+    border-radius: 10px;
+    font-family: MontserratLight;
+  }
+  .fruit-con > .text > a:hover {
+    background-color: #fff;
+    color: #006F1C;
+  }
+  
+  .fruit-con > img {
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+    position: relative;
+  }
+  
+  .species-con {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #D10B0B;
+    border-radius: 15px;
+  }
+  .species-con > .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    position: absolute;
+    z-index: 101;
+    margin-top: 200px;
+  }
+  .species-con > .text > h3 {
+    font-size: 25px;
+    font-family: MontserratLight;
+    color: #fff;
+  }
+  .species-con > .text > a {
+    background-color: #006F1C;
+    padding: 10px;
+    font-size: 13px;
+    color: white;
+    border-radius: 10px;
+    font-family: MontserratLight;
+  }
+  .species-con > .text > a:hover {
+    background-color: #fff;
+    color: #006F1C;
+  }
+  
+  .species-con > img {
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+    position: relative;
+  }
+  

@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import { CartContext } from '../CartContext/cartContext';
+import { CartContext } from '../../CartContext/cartContext'
 import { ToastContainer, toast } from 'react-toastify';
-import { foodStuff } from '../Jsons/foodstuff';
+import { foodStuff } from '../../Jsons/foodstuff';
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { MdOutlineKeyboardArrowUp, MdOutlineKeyboardArrowDown, MdClose, MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import './Foodstuff.css'
 
 
 
@@ -84,14 +85,6 @@ function Foodstuffdetails() {
                 Add to Cart
             </button>
 
-            {/* <span onClick={handleDescription} className='description'>
-                <h3>Description</h3>
-                {isDescription ? (
-                    <MdOutlineKeyboardArrowUp style={{ fontSize: "24px" }} />
-          ) : (
-            <MdOutlineKeyboardArrowDown style={{ fontSize: "24px" }} />
-          )}
-        </span> */}
         {isDescription && <p>{foodstuff.description}</p>}
         </div>
 

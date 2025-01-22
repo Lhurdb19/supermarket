@@ -2,6 +2,7 @@ import React from 'react'
 import useFormData from '../../Libs/useFormData'
 import { useNavigate } from 'react-router-dom'
 import useFormLocation from '../../Libs/useFormLocation';
+import './Shipping.css';
 
 export default function Shippinglocation() {
     const navigate = useNavigate();

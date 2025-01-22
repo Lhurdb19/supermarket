@@ -1,5 +1,6 @@
 import React from 'react'
-import { useCountUp } from 'react-countup'
+import { useCountUp } from 'react-countup';
+import './Footer.css';
 
 const CountUp1 = ()=> {
   useCountUp({ ref: 'counter1', start: 50, end: 10000})

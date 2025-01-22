@@ -1,11 +1,12 @@
 import React, { Fragment, useContext } from "react";
 import { Link } from "react-router-dom";
-import { foodStuff } from "../Jsons/foodstuff";
-import { CartContext } from "../CartContext/cartContext";
-import { useFavorites } from "./FavoriteData/favoritecontext";
+import { foodStuff } from '../../Jsons/foodstuff'
+import { CartContext } from '../../CartContext/cartContext';
+import { useFavorites } from '../FavoriteData/favoritecontext';
 import { ToastContainer, toast } from "react-toastify";
 import { MdFavorite } from "react-icons/md";
 import { MdFavoriteBorder } from "react-icons/md";
+import './Foodstuff.css';
 
 export default function Foodstuff() {
   const { addItemToCart } = useContext(CartContext);
@@ -27,7 +28,7 @@ export default function Foodstuff() {
       toast.success("Product added to favorites!");
     } else {
       removeFromFavorites(item.id);
-      toast.success("Product removed from favorites!");
+      toast("Product removed from favorites!");
     }
   };
 

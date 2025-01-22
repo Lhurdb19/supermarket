@@ -11,20 +11,4 @@
     font-family: MontserratBold;
     src: url(/src/Assets/Montserrat-Bold.ttf);
   }
-
-
-  .about-component {
-    width: 100%;
-    min-height: 100vh;
-    justify-content: center;
-    display: flex;
-    padding: 100px;
-  }
-  @media screen and (max-width:896px) {
-    .about-component {
-      width: 100%;
-      padding: 10px;
-    }
-  }
-  
   
