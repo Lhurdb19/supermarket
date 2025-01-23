@@ -39,7 +39,7 @@ export default function Provision() {
       <div className="provision-list">
         {filteredProvisions.map((provision) => (
           <div key={provision.id} className="provision-info">
-            <Link to={`/provisions/${provision.id}`}>
+            <Link to={`/provisions/${provision.id}`} className='provision-image'>
               <img src={provision.image} alt={provision.name} />
             </Link>
             <div className="provision-text">

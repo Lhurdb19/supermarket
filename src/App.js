@@ -30,6 +30,7 @@ import { AuthContext } from "./ContentApi/AuthContextApi";
 import Sidenavbar from "./Navigation/Sidenavbar";
 import Availableitem from "./Routes/Available/Availableitem";
 import Provision from "./Routes/Provision/Provision";
+import Provisiondetails from "./Routes/Provision/provisiondetails";
 // import Shippingdetails from "./Routes/Shippingfolder/shippingdetails";
 // import Shippinglocation from "./Routes/Shippingfolder/shippinglocation";
 // import Shippingpayment from "./Routes/Shippingfolder/shippingpayment";
@@ -50,15 +51,17 @@ function App() {
               <Route path="/beveragies" element={<Beveragies />} />
               <Route path="/diaryproduct" element={<Diaryproduct />} />
               <Route path="/foodstuff" element={<Foodstuff />} />
-              <Route path="/foodstuffs/:foodstuffId" element={<Foodstuffdetails/>}/>
+              <Route path="/foodstuffs/:foodstuffId" element={<Foodstuffdetails />} />
+              <Route path="/provision" element={<Provision />} />
+              <Route path="/provisions/:provisionId" element={<Provisiondetails/>}/>
               <Route path="/personalcare" element={<Personalcare />} />
               <Route path="/petcare" element={<Petcare />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/signin" element={<Signin />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/cartview" element={<Cartview />} />
-              <Route path="/favoritecontext" element={<useFavorites/>}/>
-              <Route path="/favoritelist" element={<Favoritelist/>}/>
+              <Route path="/favoritecontext" element={<useFavorites />} />
+              <Route path="/favoritelist" element={<Favoritelist />} />
               <Route path="/shippingdetails" element={<Shippingdetails />} />
               <Route path="/shippinglocation" element={<Shippinglocation />} />
               <Route path="/shippingpayment" element={<Shippingpayment />} />
@@ -85,7 +88,7 @@ function App() {
           <Route path="/" element={<Sidenavbar />}>
             <Route index element={<Availableitem />} />
             <Route path="/foodstuff" element={<Foodstuff />} />
-            <Route path="/provision" element={<Provision />} />
+
             <Route path="*" element={<Notfound />} />
           </Route>
         </Routes>
