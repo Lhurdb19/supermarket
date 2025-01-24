@@ -5,21 +5,22 @@ import { HiMiniXMark } from "react-icons/hi2";
 import { IoSearch } from "react-icons/io5";
 import { BsCart4 } from "react-icons/bs";
 import { GrFavorite } from "react-icons/gr";
-import { IoPersonAddOutline } from "react-icons/io5";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { CartContext } from "../CartContext/cartContext";
-import Favoritelist from "../Routes/FavoriteData/favoritelist";
-import { useFavorites } from "../Routes/FavoriteData/favoritecontext";
+import { AuthContext } from "../ContentApi/AuthContextApi";
 import "./Navbar.css";
 import Logo from "../Spinner/Logo";
 import Mobilemenu from "./mobilemenu";
+import { foodStuff } from "../Jsons/foodstuff";
+import { bestProducts } from "../Jsons/bestProduct";
 
 function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const [isCategory, setIsCategory] = useState(false);
   const [isUserDrop, setIsUserDrop] = useState(false);
-  const { cartCount, totalCart } = useContext(CartContext);
-  const [searchProduct, setSearchProduct] = useState('');
+  const { cartCount } = useContext(CartContext);
+  const { isLoggedIn, currentUser,users, Logout } = useContext(AuthContext);
+  const [searchProduct, setSearchProduct] = useState("");
 
   const handleMenu = () => {
     setIsMobile(!isMobile);
@@ -29,70 +30,119 @@ function Navbar() {
     setIsCategory(!isCategory);
   };
 
-  const handlesUserDrop = () => {
+  const handleUserDrop = () => {
     setIsUserDrop(!isUserDrop);
   };
 
+  const handleProductClick = () => {
+    setSearchProduct("");
+  };
+
+  const filteredFoodstuff = foodStuff.filter((foodstuff) =>
+    foodstuff.name.toLowerCase().includes(searchProduct.toLowerCase())
+  );
+
+  const filteredProvisions = bestProducts.filter((provision) =>
+    provision.name.toLowerCase().includes(searchProduct.toLowerCase())
+  );
 
   return (
     <Fragment>
+      {searchProduct && (
+        <div className="search-product-container">
+          <div className="result-card">
+            {filteredFoodstuff.length > 0 ? (
+              filteredFoodstuff.map((foodstuff) => (
+                <Link
+                  key={foodstuff.id}
+                  to={`/foodstuffs/${foodstuff.id}`}
+                  onClick={handleProductClick}
+                >
+                  <h4>{foodstuff.name}</h4>
+                </Link>
+              ))
+            ) : (
+              <p>No item found with the specified name!</p>
+            )}
+            {filteredProvisions.length > 0 ? (
+              filteredProvisions.map((provision) => (
+                <Link
+                  key={provision.id}
+                  to={`/provisions/${provision.id}`}
+                  onClick={handleProductClick}
+                >
+                  <h4>{provision.name}</h4>
+                </Link>
+              ))
+            ) : (
+              <p>No item found with the specified name!</p>
+            )}
+          </div>
+        </div>
+      )}
       <div className="topnav-container">
         <div className="menu-con">
-      <div className="toggle-menu" onClick={handleMenu}>
+          <div className="toggle-menu" onClick={handleMenu}>
             {isMobile ? <HiMiniXMark className="menu-icons" /> : <MdMenu className="menu-icons" />}
           </div>
-        <Link to={"/"}>
-          <Logo />
-        </Link>
+          <Link to={"/home"}>
+            <Logo />
+          </Link>
         </div>
-        
+
         <div className="search">
-          <input type="text" placeholder="search..." />
-          <button>
-            <IoSearch />
-          </button>
+          <input
+            type="text"
+            placeholder="Search..."
+            onChange={(e) => setSearchProduct(e.target.value)}
+            value={searchProduct}
+          />
         </div>
 
         <div className="favorite-profile">
-
-          {/* //favorite link  */}
-          <Link className="fav-icon" to='/favoritelist'>
+          {/* Favorite Link */}
+          <Link className="fav-icon" to="/favoritelist">
             <GrFavorite />
           </Link>
 
-          <Link>
-            <div className="user" onClick={() => handlesUserDrop}>
-              
-              <p>
-                <IoPersonAddOutline />
+          {/* User Profile with First Name and Dropdown */}
+          <div className="user" onClick={handleUserDrop}>
+            {isLoggedIn ? (
+              <p className="user-name">{currentUser?.firstName || currentUser}</p>
+            ) : (
+              <p className="user-icon">
+                <IoSearch />
               </p>
+            )}
 
-              {isUserDrop && (
-                <div className="user-card">
-                  <Link to="/signin" onClick={() => setIsMobile(!isMobile)}>
-                    Log in
-                  </Link>
-                  <Link to="/signup" onClick={() => setIsMobile(!isMobile)}>
-                    Signup
-                  </Link>
-                </div>
-              )}
-            </div>
-          </Link>
+            {isUserDrop && (
+              <div className="user-card">
+                {isLoggedIn ? (
+                  <button onClick={Logout}>Logout</button>
+                ) : (
+                  <>
+                    <Link to="/signin" onClick={() => setIsMobile(!isMobile)}>
+                      Log in
+                    </Link>
+                    <Link to="/signup" onClick={() => setIsMobile(!isMobile)}>
+                      Signup
+                    </Link>
+                  </>
+                )}
+              </div>
+            )}
+          </div>
 
           {/* Cart */}
-          <Link to={'/cartview'} className="cart-con">
-          <div className="card-1">
-            <BsCart4 className="cart-icon" />
-            {cartCount > 0 ? <p>{cartCount}</p> : null }
-          </div>
-          {/* <div className="card-2">
-            {totalCart > 0 ? <p>{totalCart}</p> : null }
-          </div> */}
+          <Link to={"/cartview"} className="cart-con">
+            <div className="card-1">
+              <BsCart4 className="cart-icon" />
+              {cartCount > 0 ? <p>{cartCount}</p> : null}
+            </div>
           </Link>
         </div>
-
       </div>
+
       <div className="navbar-component">
         <div className="category-container" onClick={handleCategory}>
           <div className="all-category">
@@ -115,7 +165,7 @@ function Navbar() {
               <Link to="/petcare" onClick={() => setIsCategory(false)}>
                 Pet Care
               </Link>
-              <Link to="/providion" onClick={() => setIsCategory(false)}>
+              <Link to="/provision" onClick={() => setIsCategory(false)}>
                 Vegetables & Fruits
               </Link>
               <Link to="/cartview" onClick={() => setIsCategory(false)}>
@@ -127,7 +177,6 @@ function Navbar() {
 
         <div className={`nav-link ${isMobile ? "mobile active" : ""}`}>
           <div className="nav-link-container">
-            
             <Link to="/about" onClick={() => setIsMobile(!isMobile)}>
               About
             </Link>
@@ -149,18 +198,18 @@ function Navbar() {
           </div>
 
           <div className="modal">
-          <Mobilemenu />
+            <Mobilemenu />
           </div>
-
         </div>
 
         <div className="mobile-search">
-          <input type="text" placeholder="search..." />
-          <button>
-            <IoSearch />
-          </button>
+          <input
+            type="text"
+            placeholder="Search..."
+            onChange={(e) => setSearchProduct(e.target.value)}
+            value={searchProduct}
+          />
         </div>
-
       </div>
       <Outlet />
     </Fragment>

@@ -92,6 +92,8 @@ function Cartview() {
 
 
         {cartItems.length > 0 && (
+          <div className="cart-clear">
+
           <div className="cart-summary">
             <h3>
               Subtotal:{" "}
@@ -100,11 +102,12 @@ function Cartview() {
                 currency: "USD",
               })}
             </h3>
-          </div>
-        )}
+              </div>
               <button className="clear-button" onClick={handleClearCart}>
                 Clear Cart
               </button>
+          </div>
+        )}
       </div>
       <ToastContainer
         position="top-right"
