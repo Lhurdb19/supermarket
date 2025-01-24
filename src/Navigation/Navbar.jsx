@@ -3,6 +3,8 @@ import { Link, Outlet } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 import { HiMiniXMark } from "react-icons/hi2";
 import { IoSearch } from "react-icons/io5";
+import { FaRegUser } from "react-icons/fa";
+import { FaRegCircleUser } from "react-icons/fa6";
 import { BsCart4 } from "react-icons/bs";
 import { GrFavorite } from "react-icons/gr";
 import { BiMenuAltLeft } from "react-icons/bi";
@@ -18,6 +20,7 @@ function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const [isCategory, setIsCategory] = useState(false);
   const [isUserDrop, setIsUserDrop] = useState(false);
+  const [isMobileUserDrop, setIsMobileUserDrop] = useState(false);
   const { cartCount } = useContext(CartContext);
   const { isLoggedIn, currentUser,users, Logout } = useContext(AuthContext);
   const [searchProduct, setSearchProduct] = useState("");
@@ -32,6 +35,10 @@ function Navbar() {
 
   const handleUserDrop = () => {
     setIsUserDrop(!isUserDrop);
+  };
+
+  const handleMobileUserDrop = () => {
+    setIsMobileUserDrop(!isMobileUserDrop);
   };
 
   const handleProductClick = () => {
@@ -108,17 +115,62 @@ function Navbar() {
           {/* User Profile with First Name and Dropdown */}
           <div className="user" onClick={handleUserDrop}>
             {isLoggedIn ? (
-              <p className="user-name">{currentUser?.firstName || currentUser}</p>
+              
+              <p>! Welcome</p>
+            
             ) : (
               <p className="user-icon">
-                <IoSearch />
+                <FaRegUser />
               </p>
             )}
 
             {isUserDrop && (
               <div className="user-card">
                 {isLoggedIn ? (
+                  <>
+                  <p className="user-name">{currentUser.firstName || currentUser}</p>
+                  <Link>My Profile</Link>
+                  <Link>Inbox</Link>
+                  <Link>Account Management</Link>
+                  <Link>Delete Account</Link>
                   <button onClick={Logout}>Logout</button>
+                  </>
+                ) : (
+                  <>
+                    <Link to="/signin" onClick={() => setIsMobile(false)}>
+                      Log in
+                    </Link>
+                    <Link to="/signup" onClick={() => setIsMobile(false)}>
+                      Signup
+                    </Link>
+                  </>
+                )}
+              </div>
+            )}
+          </div>
+          {/* MOBILE USER  */}
+          <div className="mobile-user" onClick={handleMobileUserDrop}>
+            {isLoggedIn ? (
+              <p><FaRegCircleUser /></p>
+            ) : (
+              <p className="user-icon">
+                <FaRegUser />
+              </p>
+            )}
+
+            {isMobileUserDrop && (
+              <div className="mobile-user-card">
+                {isLoggedIn ? (
+                  <>
+              <p>!Welcome</p>
+              <p className="mobile-user-name">{currentUser.firstName || currentUser}</p>
+              
+                  <Link>My Profile</Link>
+                  <Link>Inbox</Link>
+                  <Link>Account Management</Link>
+                  <Link>Delete Account</Link>
+                  <button onClick={Logout}>Logout</button>
+                  </>
                 ) : (
                   <>
                     <Link to="/signin" onClick={() => setIsMobile(!isMobile)}>

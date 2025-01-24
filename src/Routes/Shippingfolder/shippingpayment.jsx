@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useFormData from "../../Libs/useFormData";
 import useFormLocation from "../../Libs/useFormLocation";
@@ -19,6 +19,8 @@ export default function Shippingpayment() {
     navigate("/");
   };
   return (
+    <Fragment>
+
     <div className="payment-detail">
       <div className="frame">
             <div className="circle-1">
@@ -38,7 +40,9 @@ export default function Shippingpayment() {
                 <h5>Payment Details</h5>
             </div>
         </div>
-      <div className="shipping-data">
+      <div className="shipping-data-3">
+        <div className="shipping-info">
+
         <h3>Shipping Details</h3>
         <p>Full Name: {formData.fullName}</p>
         <p>Email: {formData.email}</p>
@@ -47,8 +51,9 @@ export default function Shippingpayment() {
         <p>City: {formData.city}</p>
         <p>State: {formData.state}</p>
         <p>Address: {formData.address}</p>
-        <br />
+        </div>
         
+        <div className="shipping-info">
         <h3>Location Details</h3>
         <p>Full Name: {locationForm.full_name}</p>
         <p>Email Address : {locationForm.email_address}</p>
@@ -56,78 +61,14 @@ export default function Shippingpayment() {
         <p>Location : {locationForm.location}</p>
         <p>Items Weight : {locationForm.itemsWeight}</p>
         <p>Quantity : {locationForm.quantity}</p>
+        </div>
       </div>
 
-      <form onSubmit={handleSubmit}>
-        <div className="third">
-            <div className="label-input">
-                <label htmlFor="bank">Bank Name</label>
-        <input
-          type="text"
-          name="bankName"
-          placeholder="Enter The Bank Name"
-          value={paymentForm.bankName || ""}
-          onChange={handlePaymentChange}
-          required
-          />
-          </div>
-
-            <div className="label-input">
-                <label htmlFor="credit">Credit Card</label>
-        <input
-          type="numb"
-          name="creditCard"
-          placeholder="Enter Credit Card Number"
-          value={paymentForm.creditCard || ""}
-          onChange={handlePaymentChange}
-          required
-          />
-          </div>
-          </div>
-
-        <div className="third">
-            <div className="label-input">
-                <label htmlFor="cvv">CVV</label>
-        <input
-          type="text"
-          name="cvv"
-          placeholder="Enter The CVV"
-          value={paymentForm.cvv || ""}
-          onChange={handlePaymentChange}
-          required
-          />
-          </div>
-
-            <div className="label-input">
-                <label htmlFor="expireDate">Expire Date</label>
-        <input
-          type="date"
-          name="expireDate"
-          placeholder="Enter Card Expiring Data"
-          value={paymentForm.expireDate || ""}
-          onChange={handlePaymentChange}
-          required
-          />
-          </div>
-        </div>
-        <div className="btn-con">
-        <button
-          onClick={()=> navigate('/shippinglocation')}
-          >
-          Prev
-        </button>
-        <button
-          type="submit"
-          style={{ width: '170px',
-              backgroundColor: isFormComplete ? "#d0300e" : "",
-              cursor: isFormComplete ? "pointer" : "not-allowed",
-            }}
-            disabled={!isFormComplete}
-            >
-          Proceed to Payment
-        </button>
+      <div className="payment-component">
+        <p>Sorry, it seems that there are no available payment methods. Please contact us if you require assistance or wish to make alternate arrangements.</p>
+      </div>
+    <button onClick={handleSubmit}>Place Order</button>
     </div>
-      </form>
-    </div>
+    </Fragment>
   );
 }

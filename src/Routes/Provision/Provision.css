@@ -27,7 +27,7 @@
   @media screen and (max-width:896px) {
     .provision-component {
       width: 100%;
-      padding: 10px;
+      padding: 10px 10px;
     }
   }
   
@@ -191,6 +191,18 @@
     padding: 20px 70px;
     gap: 40px;
   }
+  @media screen and (max-width:896px) {
+    .provision-details {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 50px 10px;
+      gap: 40px;
+    }
+  }
   
   .provision-details > .con-1 {
     width: 100%;
@@ -217,6 +229,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  @media screen and (max-width:896px) {
+    .provision-details > .con-1 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0px;
+    } 
+    
+    .provision-image-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+    }
+    
+    .provision-image-container > img {
+      width: 100%;
+      height: fit-content;
+      object-fit: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   
   
@@ -262,4 +303,46 @@
     background-color: #d8d5d5;
     color: #fff;
     border: none;
+  }
+
+  @media screen and (max-width:896px) {
+    .con-2 {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .name-text {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+      font-family: MontserratLight;
+    }
+    
+    .name-text > p {
+      font-size: 15px;
+      line-height: 1.5rem;
+    }
+    
+    .add-button {
+      width: 100%;
+      padding: 5px;
+      background-color: #006F1C;
+      color: #fff;
+      font-size: 17px;
+      border-radius: 10px;
+    }
+
+    .add-button:disabled {
+      cursor: not-allowed;
+      background-color: #d8d5d5;
+      color: #fff;
+      border: none;
+    }
   }

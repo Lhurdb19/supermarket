@@ -41,7 +41,7 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 20px;
-    padding: 20px 10px;
+    padding: 30px 10px;
   }
   
   .foodstuff-list {
@@ -217,18 +217,12 @@
   transition: all 0.3s ease-in-out;
 }
 
-@keyframes rotate {
-  0% {transform: rotateX(0px); transition: all 0.3s ease-in-out;}
-  100% {transform: rotateX(360px); transition: all 0.3s ease-in-out;}
-}
-
-
-
 @media screen and (max-width:896px) {
   .back-arrow {
     width: 40px;
     display: flex;
-    transform: translateY(110px);
+    transform: translateY(70px);
+    margin-left: 10px;
   }
   
   .back-arrow > a {
@@ -247,6 +241,18 @@
   align-items: flex-start;
   padding: 30px 70px;
   gap: 40px;
+}
+@media screen and (max-width:896px) {
+  .foodstuff-details {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 50px 10px;
+    gap: 0px;
+  }
 }
 
 .foodstuff-details > .con-1 {
@@ -278,8 +284,11 @@
 
 .foodstuff-image-overlay {
   width: 100%;
-  position: absolute;
   height: 400px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .foodstuff-image-overlay:hover > .plus-sign {
   display: flex;
@@ -294,6 +303,53 @@
   display: none;
   font-size: 35px;
   cursor: pointer;
+}
+@media screen and (max-width:896px) {
+  .foodstuff-details > .con-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  } 
+  
+  .foodstuff-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .foodstuff-image-container > img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .foodstuff-image-overlay {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .foodstuff-image-overlay > .plus-sign {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(241, 244, 246, 0.38);
+    cursor: pointer;
+    font-size: 35px;
+  }
 }
 
 .con-2 {
@@ -339,6 +395,41 @@
   color: #fff;
   border: none;
 }
+@media screen and (max-width:896px) {
+  .con-2 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .name-text {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    font-family: MontserratLight;
+  }
+  
+  .add-button {
+    width: 100%;
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 10px;
+    background-color: #006F1C;
+    color: white;
+  }
+  .add-button:disabled {
+    cursor: not-allowed;
+    background-color: #d8d5d5;
+    color: #fff;
+    border: none;
+  }
+}
 
 .image-overlay-modal {
   width: 100%;
@@ -352,8 +443,23 @@
   z-index: 101;
   top: 0px;
   left: 0%;
-  
 }
+@media screen and (max-width:896px) {
+  .image-overlay-modal {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: rgba(237, 239, 240, 0.7);
+    position: fixed;
+    z-index: 101;
+    top: 0px;
+    left: 0%;
+  }
+}
+
 .close-overlay {
   width: 20px;
   height: 20px;
@@ -414,4 +520,56 @@ color: #006F1C;
 border: 1px solid #006F1C;
 border-radius: 50%;
 cursor: pointer;
-}  
+}
+
+@media screen and (max-width:896px) {
+  .close-overlay {
+    width: 20px;
+    height: 20px;
+    transform: translateX(10px);
+    border: 1px solid #006F1C;
+    color: #ff37007a;
+    background-color: #000;
+    margin-top: 130px;
+    cursor: pointer;
+  }
+  
+  .image-overlay-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-overlay-content > img {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .arrow-left {
+    width: 30px;
+    height: 30px;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 50%;
+    color: #fff;
+    background-color:  #006F1C;
+    cursor: pointer;
+    }
+
+    .arrow-right {
+      width: 30px;
+      height: 30px;
+      right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      color: #fff;
+      background-color:  #006F1C;
+      border-radius: 50%;
+      cursor: pointer;
+      }
+}

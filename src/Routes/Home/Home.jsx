@@ -4,7 +4,7 @@ import './Home.css';
 function Home() {
   return (
     <div className='home-component'>
-      <h2>HOME</h2>
+      
       <div className="organic-container">
         <div className="organic-healthy-farm-container">
           <div className="organic-con">

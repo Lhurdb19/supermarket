@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../CartContext/cartContext";
+import { AuthContext } from "../ContentApi/AuthContextApi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { IoMdAdd } from "react-icons/io";
@@ -10,6 +11,7 @@ import "./Cartlist.css";
 function Cartview() {
   const { cartItems, addItemToCart, removeItemFromCart, clearItemFromCart } =
     useContext(CartContext);
+    const {isLoggedIn} = useContext(AuthContext);
     const navigate = useNavigate()
 
   const notifyAdd = () => toast.success("Product added successfully to cart!");
@@ -27,6 +29,14 @@ function Cartview() {
     notifyRemove();
   };
 
+  const handleCheckOut = () => {
+    if(isLoggedIn) {
+      navigate("/shippingdetails")
+    } else {
+      navigate("/signin")
+    }
+  }
+
   const handleClearCart = () => {
     clearItemFromCart(cartItems); // Assuming clearItemFromCart clears all items in the cart
     notifyClear();
@@ -36,6 +46,7 @@ function Cartview() {
   const calculateSubtotal = () => {
     return cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0);
   };
+
 
   return (
     <div>
@@ -102,10 +113,14 @@ function Cartview() {
                 currency: "USD",
               })}
             </h3>
+            
+          <p>Taxes and Shipping Calculated at checkout</p>
+          <button onClick={handleCheckOut}>Checkout</button>
               </div>
               <button className="clear-button" onClick={handleClearCart}>
                 Clear Cart
               </button>
+
           </div>
         )}
       </div>
