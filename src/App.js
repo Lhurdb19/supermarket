@@ -52,6 +52,7 @@ function App() {
               <Route path="/cartview" element={<Cartview />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/foodstuff" element={<Foodstuff />} />
+              <Route path="*" element={<Notfound />} />
             </>
           )}
 

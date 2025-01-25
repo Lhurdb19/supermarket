@@ -221,7 +221,7 @@
   .back-arrow {
     width: 40px;
     display: flex;
-    transform: translateY(70px);
+    transform: translateY(60px);
     margin-left: 10px;
   }
   
@@ -529,7 +529,6 @@ cursor: pointer;
     transform: translateX(10px);
     border: 1px solid #006F1C;
     color: #ff37007a;
-    background-color: #000;
     margin-top: 130px;
     cursor: pointer;
   }
