@@ -7,18 +7,21 @@ import { BrowserRouter } from "react-router-dom";
 import { FavoritesProvider } from "./Routes/FavoriteData/favoritecontext";
 import { CartProvider } from "./CartContext/cartContext";
 import { AuthProvider } from "./ContentApi/AuthContextApi";
+import { RecentViewsProvider } from "./Routes/RecentView/recentViewContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <FavoritesProvider>
-        <CartProvider>
-          <AuthProvider>
-            <App />
-          </AuthProvider>
-        </CartProvider>
-      </FavoritesProvider>
+      <RecentViewsProvider>
+        <FavoritesProvider>
+          <CartProvider>
+            <AuthProvider>
+              <App />
+            </AuthProvider>
+          </CartProvider>
+        </FavoritesProvider>
+      </RecentViewsProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

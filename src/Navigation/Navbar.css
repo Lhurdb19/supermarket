@@ -53,10 +53,22 @@
   justify-content: flex-start;
 }
 
-.user > p {
+.user > .welcome-drop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: -2px;
+}
+
+.welcome-drop > p {
   font-size: 16px;
   color: #fff;
   cursor: pointer;
+}
+.drop-icons {
+  font-size: 27px;
+  color: #fff;
+  margin-bottom: -5px;
 }
 
 .user > .user-card {
@@ -98,6 +110,9 @@
 
 @media screen and (max-width: 896px) {
   .user {
+    display: none;
+  }
+  .user > .welcome-drop {
     display: none;
   }
   .user > p {
@@ -333,6 +348,7 @@
 }
 .category-card > a {
   color: white;
+  font-size: 13px;
 }
 
 .nav-link-container {

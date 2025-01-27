@@ -10,6 +10,8 @@ import { GrFavorite } from "react-icons/gr";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { CartContext } from "../CartContext/cartContext";
 import { AuthContext } from "../ContentApi/AuthContextApi";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import { RiArrowDropUpLine } from "react-icons/ri";
 import "./Navbar.css";
 import Logo from "../Spinner/Logo";
 import Mobilemenu from "./mobilemenu";
@@ -92,7 +94,7 @@ function Navbar() {
           <div className="toggle-menu" onClick={handleMenu}>
             {isMobile ? <HiMiniXMark className="menu-icons" /> : <MdMenu className="menu-icons" />}
           </div>
-          <Link to={"/home"}>
+          <Link to={"/"}>
             <Logo />
           </Link>
         </div>
@@ -115,8 +117,10 @@ function Navbar() {
           {/* User Profile with First Name and Dropdown */}
           <div className="user" onClick={handleUserDrop}>
             {isLoggedIn ? (
-              
+              <div className="welcome-drop">
               <p>! Welcome</p>
+              <p>{isUserDrop ? <RiArrowDropUpLine className="drop-icons" /> : <RiArrowDropDownLine className="drop-icons" />}</p>
+              </div >
             
             ) : (
               <p className="user-icon">
@@ -131,6 +135,7 @@ function Navbar() {
                   <p className="user-name">{currentUser.firstName || currentUser}</p>
                   <Link>My Profile</Link>
                   <Link>Inbox</Link>
+                  <Link to='/recentviews'>Recent</Link>
                   <Link>Account Management</Link>
                   <Link>Delete Account</Link>
                   <button onClick={Logout}>Logout</button>
@@ -167,6 +172,7 @@ function Navbar() {
               
                   <Link>My Profile</Link>
                   <Link>Inbox</Link>
+                  <Link to='/recentviews'>Recent</Link>
                   <Link>Account Management</Link>
                   <Link>Delete Account</Link>
                   <button onClick={Logout}>Logout</button>
@@ -242,7 +248,7 @@ function Navbar() {
               Foodgrains & Oil
             </Link>
             <Link to="/diaryproduct" onClick={() => setIsMobile(!isMobile)}>
-              Dairy Products
+              Daily Products
             </Link>
             <Link to="/contact" onClick={() => setIsMobile(!isMobile)}>
               Contact Us

@@ -1,9 +1,10 @@
 import React from 'react';
+import './Shop.css';
 
 function Shop() {
   return (
-    <div>
-      SHOP
+    <div className='shop-component'>
+  
     </div>
   )
 }

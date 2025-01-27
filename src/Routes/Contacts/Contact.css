@@ -169,6 +169,21 @@
     color: #006F1C;
     font-size: 40px;
   }
+  @media screen and (max-width:896px) {
+    .address-info {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .address-icon {
+      color: #006F1C;
+      font-size: 35px;
+    }
+  }
 
   .phone {
     width: 100%;
@@ -189,6 +204,16 @@
   .phone > .number > a {
     color: #000;
   }
+  @media screen and (max-width:896px) {
+    .phone > .number {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 12px;
+    }
+  }
 
   .message {
     width: 100%;
@@ -204,9 +229,15 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 5px;
-    /* color: #006F1C; */
-    font-size: 12px;
+    font-size: 13px;
   }
+  @media screen and (max-width:896px) {
+    .message > .support {
+      gap: 5px;
+      font-size: 12px;
+    }
+  }
+
 
   .timing {
     width: 100%;
@@ -222,8 +253,12 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 5px;
-    /* color: #006F1C; */
     font-size: 13px;
+  }
+  @media screen and (max-width:896px) {
+    .timing > .open {
+      font-size: 12px;
+    }
   }
 
   .address {
@@ -240,6 +275,11 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 5px;
-    /* color: #006F1C; */
     font-size: 13px;
+  }
+
+  @media screen and (max-width:896px) {
+    .address > .locate {
+      font-size: 12px;
+    }
   }

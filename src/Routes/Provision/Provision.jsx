@@ -26,10 +26,10 @@ export default function Provision() {
   const handleAddFavorites = (item) => {
     if(!isFavorite(item.id)) {
       addToFavorites(item);
-      toast.success("Product added to favorites!")
+      toast.success("Product added  successfully to wishlist!")
     } else {
       removeFromFavorites(item.id);
-      toast("Product removed from favorites!")
+      toast("Product removed successfully from wishlist!")
     }
   }
   

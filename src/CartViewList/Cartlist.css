@@ -67,6 +67,7 @@
     width: 100%;
     display: flex;
     transform: translateX(-10px);
+    font-size: 11px;
   }
   .cartlistview-container > ul > li > .total {
     width: 100%;

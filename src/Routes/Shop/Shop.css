@@ -12,3 +12,13 @@
     src: url(/src/Assets/Montserrat-Bold.ttf);
   }
   
+
+  .shop-component {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 70px;
+    gap: 40px;
+  }

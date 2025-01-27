@@ -12,3 +12,196 @@
     src: url(/src/Assets/Montserrat-Bold.ttf);
   }
   
+
+  .dailyproduct-component {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 70px;
+    gap: 40px;
+  }
+
+  .dailyproduct-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px 20px;
+  }
+  
+  @media screen and (max-width:896px) {
+    .dailyproduct-component {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+      padding: 90px 10px;
+    }
+    
+    .dailyproduct-list {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 40px 20px;
+    }
+  }
+  
+  .dailyproduct-info {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(237, 239, 240, 0.7);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .dailyproduct-info:hover {
+    box-shadow: 0.5px 0.5px 0.5px 0.5px lightgray;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .dailyproduct-image {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+  }
+  
+  .dailyproduct-image > img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+  }
+  .dailyproduct-image > img:hover {
+    scale: 1.1;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .dailyproduct-text {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 5px 10px;
+    gap: 3px;
+    font-family: MontserratLight;
+  }
+  .dailyproduct-text > h3 {
+    font-size: 11px;
+    font-family: MontserratLight;
+  }
+  .dailyproduct-text > h4 {
+    font-size: 14px;
+    font-family: MontserratLight;
+  }
+  .dailyproduct-text > p {
+    font-size: 14px;
+    font-family: MontserratLight;
+  }
+  .dailyproduct-text > .btn {
+    width: 100%;
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: MontserratLight;
+  }
+  .dailyproduct-text:hover > .btn {
+    display: block;
+  }
+  .dailyproduct-text > .btn > button {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border:1px solid #006F1C;
+    color: #006F1C;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .dailyproduct-text > .btn > button:hover {
+    background-color: #006F1C;
+    color: white;
+  }
+  .btn > button:disabled {
+    background-color: #a4a0a0;
+    cursor: not-allowed;
+    border: none;
+  }
+  .btn > button:disabled:hover {
+    background-color: #a4a0a0;
+    border: none;
+    cursor: not-allowed;
+  }
+  @media screen and (max-width:896px) {
+    .dailyproduct-info {
+      width: 100%;
+      display: flex;
+    }
+    
+    .dailyproduct-info > .personal-image {
+      width: 100%;
+    }
+    
+    .dailyproduct-info > .personal-image > img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    
+    .dailyproduct-info > .personalcare-text {
+      width: 100%;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 10px;
+      gap: 5px;
+      background-color: rgba(246, 241, 241, 0.815);
+    }
+    .dailyproduct-text > h3 {
+      font-size: 9px;
+      font-family: MontserratLight;
+    }
+    .dailyproduct-text > h4 {
+      font-size: 12px;
+      font-family: MontserratLight;
+    }
+    .dailyproduct-text > p {
+      font-size: 11px;
+      font-family: MontserratLight;
+    }
+  
+    .dailyproduct-text > .btn {
+      width: 100%;
+      display: flex;
+      display: block;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  
+    .dailyproduct-text > .btn > button {
+      width: 100%;
+      font-size: 13px;
+      cursor: pointer;
+      background-color: #006F1C;
+      color: #fff;
+    }
+    .btn > button:disabled {
+      background-color: #a4a0a0;
+      cursor: not-allowed;
+    }
+  }
