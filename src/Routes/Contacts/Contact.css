@@ -22,7 +22,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    padding: 70px;
+    padding: 100px 70px;
     gap: 40px;
   }
   @media screen and (max-width:896px) {

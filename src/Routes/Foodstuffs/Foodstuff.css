@@ -12,6 +12,10 @@
     src: url(/src/Assets/Montserrat-Bold.ttf);
   }
 
+  @font-face {
+    font-family: ProtestStrike;
+    src: url(/src/Assets/Bebas_Neue\,Montserrat\,Protest_Strike.zip);
+  }
   
 /* FOODSTUFF COMPONENT  */
 .foodstuff-component {
@@ -21,8 +25,10 @@
   align-items: flex-start;
   flex-direction: column;
   gap: 20px;
-  padding: 20px 70px;
+  padding: 100px 70px;
 }
+
+
 
 .foodstuff-list {
   width: 100%;
@@ -200,7 +206,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  transform: translateY(10px);
+  transform: translateY(90px);
   margin-left: 70px;
 }
 
@@ -239,7 +245,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 30px 70px;
+  padding: 100px 70px;
   gap: 40px;
 }
 @media screen and (max-width:896px) {

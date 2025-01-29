@@ -35,7 +35,7 @@ export default function Provision() {
   
   return (
     <div className='provision-component'>
-      <h3>Available Items</h3>
+      <h2>VEGETABLE & FRUITS</h2>
       <div className="provision-list">
         {filteredProvisions.map((provision) => (
           <div key={provision.id} className="provision-info">

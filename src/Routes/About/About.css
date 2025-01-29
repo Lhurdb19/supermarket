@@ -12,30 +12,20 @@
     src: url(/src/Assets/Montserrat-Bold.ttf);
   }
 
+  @font-face {
+    font-family: ProtestStrike;
+    src: url(/src/Assets/Bebas_Neue\,Montserrat\,Protest_Strike.zip);
+  }
 
-  .about-component {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 20px 70px;
-    gap: 40px;
-  }
-  @media screen and (max-width:896px) {
-    .about-component {
-      width: 100%;
-      padding:20px 10px;
-    }
-  }
-  
+
   .about-container {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 70px;
+    background-color: rgba(246, 241, 241, 0.815);
+    padding: 100px 70px 30px 70px;
   }
 
   @media screen and (max-width:896px) {
@@ -100,6 +90,67 @@
     }
   }
 
+  .about-component {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 100px 70px;
+  }
+
+  @media screen and (max-width:896px) {
+    .about-component {
+      width: 100%;
+      padding:20px 10px;
+    }
+  }
+
+  .company-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 70px;
+    padding:0 0 70px 0;
+  }
+
+  .company-con {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .company-text {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .company-text > h2 {
+    font-size: 20px;
+    font-family: ProtestStrike;
+  }
+
+  .company-text > p {
+    font-size: 14px;
+    line-height: 1.6rem;
+    font-family: MontserratLight;
+  }
+
+  .company-con > img {
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+  }
+  
   .countup-container {
     width: 100%;
     display: flex;

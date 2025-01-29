@@ -6,6 +6,7 @@ import Home from "./Routes/Home/Home";
 import Navbar from "./Navigation/Navbar";
 import About from "./Routes/About/About";
 import Shop from "./Routes/Shop/shop";
+import Shopdetails from "./Routes/Shop/shopdetails";
 import Beveragies from "./Routes/Beveragies/beveragies";
 import Diaryproduct from "./Routes/Diaryproducts/diaryproduct";
 import Dailyproductdetail from "./Routes/Diaryproducts/Dailyproductdetail";
@@ -67,6 +68,7 @@ function App() {
               <Route path="/provision" element={<Provision />} />
               <Route path="/about" element={<About />} />
               <Route path="/shop" element={<Shop />} />
+              <Route path="/shops/:id" element={<Shopdetails/>}/>
               <Route path="/beveragies" element={<Beveragies />} />
               <Route path="/diaryproduct" element={<Diaryproduct />} />
               <Route path="/dailyproducts/:dailyproduct" element={<Dailyproductdetail/>}/>

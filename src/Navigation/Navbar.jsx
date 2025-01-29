@@ -1,8 +1,7 @@
 import React, { Fragment, useContext, useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import {NavLink as Link, Outlet } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 import { HiMiniXMark } from "react-icons/hi2";
-import { IoSearch } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { BsCart4 } from "react-icons/bs";
@@ -24,7 +23,7 @@ function Navbar() {
   const [isUserDrop, setIsUserDrop] = useState(false);
   const [isMobileUserDrop, setIsMobileUserDrop] = useState(false);
   const { cartCount } = useContext(CartContext);
-  const { isLoggedIn, currentUser,users, Logout } = useContext(AuthContext);
+  const { isLoggedIn, currentUser, users, Logout } = useContext(AuthContext);
   const [searchProduct, setSearchProduct] = useState("");
 
   const handleMenu = () => {
@@ -46,6 +45,10 @@ function Navbar() {
   const handleProductClick = () => {
     setSearchProduct("");
   };
+
+  const NavLink = ({isActive}) => ({
+    color: isActive ? "#D10B0B" : ''
+  })
 
   const filteredFoodstuff = foodStuff.filter((foodstuff) =>
     foodstuff.name.toLowerCase().includes(searchProduct.toLowerCase())
@@ -92,7 +95,11 @@ function Navbar() {
       <div className="topnav-container">
         <div className="menu-con">
           <div className="toggle-menu" onClick={handleMenu}>
-            {isMobile ? <HiMiniXMark className="menu-icons" /> : <MdMenu className="menu-icons" />}
+            {isMobile ? (
+              <HiMiniXMark className="menu-icons" />
+            ) : (
+              <MdMenu className="menu-icons" />
+            )}
           </div>
           <Link to={"/"}>
             <Logo />
@@ -118,10 +125,18 @@ function Navbar() {
           <div className="user" onClick={handleUserDrop}>
             {isLoggedIn ? (
               <div className="welcome-drop">
-              <p>! Welcome</p>
-              <p>{isUserDrop ? <RiArrowDropUpLine className="drop-icons" /> : <RiArrowDropDownLine className="drop-icons" />}</p>
-              </div >
-            
+                <p>! Welcome</p>
+                <p>
+                  {isUserDrop ? (
+                    <RiArrowDropUpLine className="drop-icons" />
+                  ) : (
+                    <RiArrowDropDownLine className="drop-icons" />
+                  )}
+                </p>
+                <p className="user-name">
+                  {currentUser.firstName ? currentUser.firstName.slice(0, 3) : currentUser || currentUser}
+                </p>
+              </div>
             ) : (
               <p className="user-icon">
                 <FaRegUser />
@@ -132,20 +147,19 @@ function Navbar() {
               <div className="user-card">
                 {isLoggedIn ? (
                   <>
-                  <p className="user-name">{currentUser.firstName || currentUser}</p>
-                  <Link>My Profile</Link>
-                  <Link>Inbox</Link>
-                  <Link to='/recentviews'>Recent</Link>
-                  <Link>Account Management</Link>
-                  <Link>Delete Account</Link>
-                  <button onClick={Logout}>Logout</button>
+                    <Link >My Profile</Link>
+                    <Link >Inbox</Link>
+                    <Link to="/recentviews">Recent</Link>
+                    <Link >Account Management</Link>
+                    <Link >Delete Account</Link>
+                    <button >Logout</button>
                   </>
                 ) : (
                   <>
-                    <Link to="/signin" onClick={() => setIsMobile(false)}>
+                    <Link style={NavLink} to="/signin" onClick={() => setIsMobile(false)}>
                       Log in
                     </Link>
-                    <Link to="/signup" onClick={() => setIsMobile(false)}>
+                    <Link style={NavLink} to="/signup" onClick={() => setIsMobile(false)}>
                       Signup
                     </Link>
                   </>
@@ -156,7 +170,9 @@ function Navbar() {
           {/* MOBILE USER  */}
           <div className="mobile-user" onClick={handleMobileUserDrop}>
             {isLoggedIn ? (
-              <p><FaRegCircleUser /></p>
+              <p>
+                <FaRegCircleUser />
+              </p>
             ) : (
               <p className="user-icon">
                 <FaRegUser />
@@ -167,22 +183,24 @@ function Navbar() {
               <div className="mobile-user-card">
                 {isLoggedIn ? (
                   <>
-              <p>!Welcome</p>
-              <p className="mobile-user-name">{currentUser.firstName || currentUser}</p>
-              
-                  <Link>My Profile</Link>
-                  <Link>Inbox</Link>
-                  <Link to='/recentviews'>Recent</Link>
-                  <Link>Account Management</Link>
-                  <Link>Delete Account</Link>
-                  <button onClick={Logout}>Logout</button>
+                    <p>!Welcome</p>
+                    <p className="mobile-user-name">
+                      {currentUser.firstName || currentUser}
+                    </p>
+
+                    <Link style={NavLink}>My Profile</Link>
+                    <Link style={NavLink}>Inbox</Link>
+                    <Link to="/recentviews" style={NavLink}>Recent</Link>
+                    <Link style={NavLink}>Account Management</Link>
+                    <Link style={NavLink}>Delete Account</Link>
+                    <button onClick={Logout} style={NavLink}>Logout</button>
                   </>
                 ) : (
                   <>
-                    <Link to="/signin" onClick={() => setIsMobile(!isMobile)}>
+                    <Link to="/signin" onClick={() => setIsMobile(!isMobile)} style={NavLink}>
                       Log in
                     </Link>
-                    <Link to="/signup" onClick={() => setIsMobile(!isMobile)}>
+                    <Link to="/signup" onClick={() => setIsMobile(!isMobile)} style={NavLink}>
                       Signup
                     </Link>
                   </>
@@ -211,22 +229,22 @@ function Navbar() {
           </div>
           {isCategory && (
             <div className="category-card">
-              <Link to="/beveragies" onClick={() => setIsCategory(false)}>
+              <Link to="/beveragies" onClick={() => setIsCategory(false)} style={NavLink}>
                 Beveragies
               </Link>
-              <Link to="/foodstuff" onClick={() => setIsCategory(false)}>
+              <Link to="/foodstuff" onClick={() => setIsCategory(false)} style={NavLink}>
                 Foodgrains & Oil
               </Link>
-              <Link to="/personalcare" onClick={() => setIsCategory(false)}>
+              <Link to="/personalcare" onClick={() => setIsCategory(false)} style={NavLink}>
                 Personal Care
               </Link>
-              <Link to="/petcare" onClick={() => setIsCategory(false)}>
+              <Link to="/petcare" onClick={() => setIsCategory(false)} style={NavLink}>
                 Pet Care
               </Link>
-              <Link to="/provision" onClick={() => setIsCategory(false)}>
+              <Link to="/provision" onClick={() => setIsCategory(false)} style={NavLink}>
                 Vegetables & Fruits
               </Link>
-              <Link to="/cartview" onClick={() => setIsCategory(false)}>
+              <Link to="/cartview" onClick={() => setIsCategory(false)} style={NavLink}>
                 Check Cart
               </Link>
             </div>
@@ -235,22 +253,22 @@ function Navbar() {
 
         <div className={`nav-link ${isMobile ? "mobile active" : ""}`}>
           <div className="nav-link-container">
-            <Link to="/about" onClick={() => setIsMobile(!isMobile)}>
+            <Link to="/about" onClick={() => setIsMobile(!isMobile)} style={NavLink}>
               About
             </Link>
-            <Link to="/shop" onClick={() => setIsMobile(!isMobile)}>
+            <Link to="/shop" onClick={() => setIsMobile(!isMobile)} style={NavLink}>
               Shop
             </Link>
-            <Link to="/provision" onClick={() => setIsMobile(!isMobile)}>
+            <Link to="/provision" onClick={() => setIsMobile(!isMobile)} style={NavLink}>
               Vegetables & Fruits
             </Link>
-            <Link to="/foodstuff" onClick={() => setIsMobile(!isMobile)}>
+            <Link to="/foodstuff" onClick={() => setIsMobile(!isMobile)} style={NavLink}>
               Foodgrains & Oil
             </Link>
-            <Link to="/diaryproduct" onClick={() => setIsMobile(!isMobile)}>
+            <Link to="/diaryproduct" onClick={() => setIsMobile(!isMobile)} style={NavLink}>
               Daily Products
             </Link>
-            <Link to="/contact" onClick={() => setIsMobile(!isMobile)}>
+            <Link to="/contact" onClick={() => setIsMobile(!isMobile)} style={NavLink}>
               Contact Us
             </Link>
           </div>

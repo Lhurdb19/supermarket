@@ -15,6 +15,8 @@
   gap: 15px;
   padding: 0px 70px;
   background-color: #006f1c;
+  position: fixed;
+  z-index: 999;
 }
 
 .topnav-container > a {
@@ -71,17 +73,27 @@
   margin-bottom: -5px;
 }
 
+.user-icon {
+  color: #fff;
+  cursor: pointer;
+}
+
 .user > .user-card {
-  width: 170px;
+  width: 175px;
+  top: 71px;
   display: flex;
-  gap: 7px;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 10px;
-  top: 71px;
+  flex-direction: column;
+  gap: 10px;
   position: absolute;
-  background-color: #006f1c;
+  padding: 10px;
+  background: #fff;
+  z-index: 100;
+  border-bottom: 2px solid #006f1c;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.05)
 }
 .user-name {
   color: #fff;
@@ -89,7 +101,7 @@
 }
 
 .user-card > a {
-  color: white;
+  color: #006f1c;
   cursor: pointer;
   font-size: 13px;
 }
@@ -98,7 +110,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: #fff;
+  color: #006f1c;
   font-size: 15px;
 }
 
@@ -310,6 +322,8 @@
   top: 70px;
   padding: 10px 70px;
   border-bottom: 1px solid #006f1c;
+  position: sticky;
+  background-color: #fff;
 }
 
 .category-container {
@@ -335,19 +349,24 @@
 }
 
 .category-card {
-  width: 165px;
-  top: 141px;
+  width: 175px;
+  top: 71px;
   display: flex;
-  align-items: flex-start;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  gap: 5px;
-  padding: 10px;
-  background-color: #006f1c;
+  gap: 10px;
   position: absolute;
+  padding: 10px;
+  background: #fff;
+  z-index: 100;
+  border-bottom: 2px solid #006f1c;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.07)
 }
 .category-card > a {
-  color: white;
+  color: #006f1c;
   font-size: 13px;
 }
 
@@ -363,12 +382,6 @@
   font-size: 14px;
 }
 
-.nav-link-container > a:focus {
-  background-color: #006f1c;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-}
 
 .toggle-menu {
   display: none;

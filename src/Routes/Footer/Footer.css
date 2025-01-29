@@ -12,6 +12,10 @@
     src: url(/src/Assets/Montserrat-Bold.ttf);
   }
 
+  @font-face {
+    font-family: ProtestStrike;
+    src: url(/src/Assets/Bebas_Neue\,Montserrat\,Protest_Strike.zip);
+  }
   
   
 .footer-component {
@@ -61,7 +65,7 @@
   }
   .help-box > h2 {
     font-size: 13px;
-    font-family: MontserratBold;
+    font-family: ProtestStrike;
   }
   .help-box > a {
     color: #000;
@@ -84,7 +88,7 @@
   }
   .account-box > h2 {
     font-size: 13px;
-    font-family: MontserratBold;
+    font-family: ProtestStrike;
   }
   .account-box > a {
     color: #000;
@@ -107,7 +111,7 @@
   }
   .page-box > h2 {
     font-size: 13px;
-    font-family: MontserratBold;
+    font-family: ProtestStrike;
   }
   .page-box > a {
     color: #000;
@@ -150,7 +154,7 @@
     }
     .help-box > h2 {
       font-size: 10px;
-      font-family: MontserratBold;
+      font-family: ProtestStrike;
     }
     .help-box > a {
       color: #000;
@@ -169,7 +173,7 @@
     }
     .account-box > h2 {
       font-size: 10px;
-      font-family: MontserratBold;
+      font-family: ProtestStrike;
     }
     .account-box > a {
       color: #000;
@@ -187,7 +191,7 @@
     }
     .page-box > h2 {
       font-size: 10px;
-      font-family: MontserratBold;
+      font-family: ProtestStrike;
     }
     .page-box > a {
       color: #000;
@@ -205,8 +209,16 @@
   }
   .more-container > h2 {
     font-size: 12px;
-    font-family: MontserratBold;
+    font-family: ProtestStrike;
     color: #000;
+  }
+
+  .more-container > .more-partner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
   }
   @media screen and (max-width:896px) {
     .more-container {
@@ -370,18 +382,36 @@
     font-size: 6px;
   }
 
-  .more-partner {
+  .contact-info > a {
+    width: 20px;
+    height: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+  }
+  .contact-info > a > .icons {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+
+  .partner-container {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .partner-container > h2 {
+    font-size: 17px;
   }
 
   .partner-card {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
   }
 
@@ -418,23 +448,11 @@
   .contact-info {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;
+    gap: 15px;
   }
 
-  .contact-info > a {
-    width: 20px;
-    height: 20px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-  }
-  .contact-info > a > img {
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
-  }
 
   @media screen and (max-width:896px) {
     .contact-info {
@@ -490,10 +508,11 @@
   }
 
   footer > a {
-    color: #000;
+    color: #fff;
+    font-family: ProtestStrike;
   }
   footer > a:hover {
-    color: #fff;
+    color: #000
   }
   @media screen and (max-width:896px) {
     footer {
@@ -520,7 +539,7 @@
     font-size: 12px;
   }
 
-  .footer-box > .box > h5 > a:hover {
+  .footer-box > .box > h5 > a {
     color: #fff;
   }
   @media screen and (max-width:896px) {

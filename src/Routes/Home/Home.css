@@ -19,7 +19,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    padding:30px 70px;
+    padding:100px 70px;
   }
   @media screen and (max-width:896px) {
     .home-component {

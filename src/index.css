@@ -12,6 +12,15 @@
   src: url(/src/Assets/Montserrat-Bold.ttf);
 }
 
+@font-face {
+  font-family: ProtestStrike;
+  src: url(/src/Assets/Bebas_Neue\,Montserrat\,Protest_Strike.zip);
+}
+
+
+h2 {
+  font-family: ProtestStrike;
+}
 .search-product-container {
   width: 100%;
   min-height: 100vh;
@@ -69,9 +78,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: rgb(249, 247, 249);
-  padding: 100px;
+  padding: 100px 70px;
   gap: 10px;
 }
 @media screen and (max-width:896px) {
@@ -97,7 +106,7 @@
 }
 @media screen and (max-width:896px) {
   .form-component > form {
-    width: 400px;
+    width: 100%;
     padding: 10px;
     gap: 10px;
   }

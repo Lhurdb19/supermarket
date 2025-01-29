@@ -34,6 +34,7 @@ function Diaryproduct() {
 
   return (
   <div className="dailyproduct-component">
+    <h2>DAILY PRODUCTS</h2>
     <div className="dailyproduct-list">
       {filteredDaily.map((dailyproduct) => (
         <div key={dailyproduct.id} className="dailyproduct-info">

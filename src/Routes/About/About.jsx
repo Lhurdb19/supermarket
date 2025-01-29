@@ -27,31 +27,42 @@ const CountUp4 = () => {
 function About() {
 
   return (
-    <div className="about-component">
-      {/* <h2>ABOUT</h2> */}
-      <div className="about-container">
+    <>
+    <div className="about-container">
         <div className="about-text">
-          <h2>We Prefer only Organic Foods</h2>
-          <p>
-            "Organic Foods: A Healthy and Sustainable Choice" One of the primary
-            benefits of organic foods is their potential to be healthier, as
-            they are free from harmful chemical residues. Studies suggest that
-            organic produce often contains higher levels of certain nutrients,
-            such as antioxidants, compared to conventionally grown alternatives.
-            Organic meats and dairy products also come from animals raised on
-            organic feed, with strict regulations ensuring they are free from
-            antibiotics, hormones, and have access to pasture. Organic farming
-            also plays a crucial role in environmental sustainability. By
-            avoiding synthetic chemicals and promoting biodiversity, organic
-            agriculture reduces pollution, conserves water, and enhances soil
-            health. It also encourages ethical treatment of animals and
-            minimizes the carbon footprint associated with food production.
-            Although organic foods may be slightly more expensive, many
-            consumers find the investment worthwhile for better health, improved
+          <h2>THE FOUNDER</h2>
+          <p>Donec fermentum nulla eget mauris fringilla ultricies Proin volutpat eleifend leo, non interdum sapien posuere sed. Ut consectetur, nisi sed faucibus tempus, sem dui hendrerit erat, nec commodo felis nisl a lectus. Suspendisse eget lacus mattis, suscipit ex non, auctor urna
             taste, and the positive impact on the planet.
           </p>
         </div>
-        <img src="https://i.ibb.co/8DC4W8S/lime-removebg-preview.png" alt="" />
+        <img src="https://cdn.azeusconvene.com/wp-content/uploads/Women-CEOs-and-Business-Leaders_thumbnail.jpg" alt="" />
+      </div>
+    <div className="about-component">
+      
+      <div className="company-container">
+        <div className="company-con">
+          <div className="company-text">
+          <h2>THE STORE</h2>
+          <p>Donec ultricies convallis facilisis. Morbi at risus laoreet, mattis odio quis, volutpat quam. Sed sit amet lectus interdum, lobortis velit vitae, efficitur est. Integer nec erat ac augue lobortis tristique. Proin non tortor vitae libero rutrum posuere. Suspendisse ornare leo sed nulla varius, id facilisis arcu placerat. Sed finibus, neque vitae dictum convallis, tortor nisl tincidunt est, in accumsan est tellus non tortor.</p>
+          </div>
+          <img src="https://campbellrigg.com/images/uploads/23.01.21/Aldi-China1.jpg" alt="" />
+        </div>
+
+        <div className="company-con">
+          <img src="https://arirms.com/wp-content/uploads/2024/05/Featured-Image-The-Future-of-Grocery-StoresGrocery-IndustryTrends.jpg" alt="" />
+          <div className="company-text">
+          <h2>OUR MISSION</h2>
+          <p>Donec ultricies convallis facilisis. Morbi at risus laoreet, mattis odio quis, volutpat quam. Sed sit amet lectus interdum, lobortis velit vitae, efficitur est. Integer nec erat ac augue lobortis tristique. Proin non tortor vitae libero rutrum posuere. Suspendisse ornare leo sed nulla varius, id facilisis arcu placerat. Sed finibus, neque vitae dictum convallis, tortor nisl tincidunt est, in accumsan est tellus non tortor.</p>
+          </div>
+        </div>
+
+        <div className="company-con">
+          <div className="company-text">
+          <h2>OUR VISION</h2>
+          <p>Donec ultricies convallis facilisis. Morbi at risus laoreet, mattis odio quis, volutpat quam. Sed sit amet lectus interdum, lobortis velit vitae, efficitur est. Integer nec erat ac augue lobortis tristique. Proin non tortor vitae libero rutrum posuere. Suspendisse ornare leo sed nulla varius, id facilisis arcu placerat. Sed finibus, neque vitae dictum convallis, tortor nisl tincidunt est, in accumsan est tellus non tortor.</p>
+          </div>
+          <img src="https://www.wilderlawgroup.com/wp-content/uploads/workers-compensation-grocery-employees-yay21254300.jpg" alt="" />
+        </div>
       </div>
 
       <div className="countup-container">
@@ -75,6 +86,7 @@ function About() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

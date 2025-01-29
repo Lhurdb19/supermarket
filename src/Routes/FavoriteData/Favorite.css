@@ -21,7 +21,7 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
-    padding: 20px 70px;
+    padding: 100px 70px;
   }
   .favorite-component > h2 {
     font-family: MontserratBold;
