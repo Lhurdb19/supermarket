@@ -151,15 +151,19 @@
     justify-content: flex-start;
     align-items: flex-start;
     padding: 10px;
-    top: 100px;
+    top: 80px;
     position: absolute;
-    z-index: 105;
-    color: white;
-    background-color: #006f1c;
+    z-index: 999;
+    color: #006f1c;
+    background-color: #fff;
     transform: translateX(-102px);
-}
+    border-bottom: 2px solid #006f1c;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.05)
+  }
 .mobile-user-card > a {
-    color: white;
+  color: #006f1c;
     cursor: pointer;
     font-size: 13px;
   }
@@ -168,7 +172,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: #fff;
+    color: #006f1c;
     font-size: 15px;
   }
 }
@@ -269,7 +273,7 @@
     justify-content: flex-start;
     align-items: center;
     padding: 5px;
-    top: 70px;
+    top: 50px;
     right: 0px;
   }
 
@@ -406,7 +410,7 @@
     align-items: center;
     position: fixed;
     z-index: 105;
-    top: 60px;
+    top: 50px;
     bottom: 50px;
     background-color: #fff;
   }
@@ -428,7 +432,7 @@
     gap: 10px;
     position: fixed;
     z-index: 100;
-    top: 70px;
+    top: 50px;
     left: 0%;
     padding: 10px 20px 10px 10px;
     transform: translateX(-100%);

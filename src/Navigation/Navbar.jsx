@@ -188,11 +188,11 @@ function Navbar() {
                       {currentUser.firstName || currentUser}
                     </p>
 
-                    <Link style={NavLink}>My Profile</Link>
-                    <Link style={NavLink}>Inbox</Link>
-                    <Link to="/recentviews" style={NavLink}>Recent</Link>
-                    <Link style={NavLink}>Account Management</Link>
-                    <Link style={NavLink}>Delete Account</Link>
+                    <Link >My Profile</Link>
+                    <Link >Inbox</Link>
+                    <Link to="/recentviews" >Recent</Link>
+                    <Link >Account Management</Link>
+                    <Link >Delete Account</Link>
                     <button onClick={Logout}>Logout</button>
                   </>
                 ) : (

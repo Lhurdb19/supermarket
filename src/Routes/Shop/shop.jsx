@@ -58,7 +58,7 @@ const filteredShop = allProducts.filter((shop) => shop.name && shop.name.toLower
                 }) : ''}
               </h4>
               <p>In stock: {shop.inStock === 'Yes' ? 'Available' : "Out of stock"}</p>
-              <button style={{border: 'none', cursor: 'pointer', fontSize: '17px'}} onClick={() => handleAddFavorite(shop)}>{isFavorite(shop.id) ? <MdFavorite /> : <MdFavoriteBorder /> }</button>
+              <button style={{border: 'none', cursor: 'pointer', fontSize: '17px'}} onClick={() => handleAddFavorite(shop)}>{isFavorite(shop.id) ? <MdFavorite style={{color: '#006f1c'}} /> : <MdFavoriteBorder /> }</button>
               <div className="btn">
                 <button onClick={() => handleAddToCart(shop)} disabled={shop.inStock === 'No'}>Add to Cart</button>
               </div>

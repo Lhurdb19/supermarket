@@ -53,7 +53,7 @@ const toggleAddFavorites = (item) => {
                   : '' }
               </h4>
               <p >In stock: {personal.inStock === 'Yes' ? 'Available' : 'Out of stock'}</p>
-              <button style={{border: 'none', cursor: 'pointer', fontSize: '17px'}} onClick={() => toggleAddFavorites(personal)}>{isFavorite(personal.id) ? <MdFavorite /> : <MdFavoriteBorder />}</button>
+              <button style={{border: 'none', cursor: 'pointer', fontSize: '17px'}} onClick={() => toggleAddFavorites(personal)}>{isFavorite(personal.id) ? <MdFavorite style={{color: '#006f1c'}} /> : <MdFavoriteBorder />}</button>
               <div className="btn">
                 <button onClick={() => handleAddToCart(personal)} disabled={personal.inStock === 'No'}>Add to Cart</button>
               </div>

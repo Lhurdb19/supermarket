@@ -53,7 +53,7 @@ export default function Provision() {
                   : ''}
               </h4>
               <p>In stock: {provision.inStock === 'Yes' ? 'Available' : 'Out of stock' }</p>
-              <button style={{border: 'none', cursor: 'pointer', fontSize:'17px'}} onClick={() => handleAddFavorites(provision)}>{isFavorite(provision.id) ? <MdFavorite /> : <MdFavoriteBorder />}</button>
+              <button style={{border: 'none', cursor: 'pointer', fontSize:'17px'}} onClick={() => handleAddFavorites(provision)}>{isFavorite(provision.id) ? <MdFavorite style={{color: '#006f1c'}} /> : <MdFavoriteBorder />}</button>
               <div className="btn">
                 <button onClick={() => handleAddToCart(provision)}
                   disabled={provision.inStock === 'No'}>

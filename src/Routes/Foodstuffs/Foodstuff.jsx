@@ -72,7 +72,7 @@ export default function Foodstuff({ item }) {
                 style={{ border: "none", cursor: "pointer", fontSize: "17px" }}
                 onClick={() => handleFavorites(foodstuff)}
               >
-                {isFavorite(foodstuff.id) ? <MdFavorite /> : <MdFavoriteBorder />}
+                {isFavorite(foodstuff.id) ? <MdFavorite style={{color: '#006f1c'}} /> : <MdFavoriteBorder />}
               </button>
               <div className="btn">
                 <button

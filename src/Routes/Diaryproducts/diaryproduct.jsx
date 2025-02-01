@@ -54,7 +54,7 @@ function Diaryproduct() {
             </h4>
             <p>In stock:{dailyproduct.inStock === 'Yes' ? 'Available' : 'Out of stock'}</p>
 
-            <button style={{border: 'none', cursor: 'pointer', fontSize: '17px'}} onClick={() => handleFavoritesProduct(dailyproduct)}>{isFavorite(dailyproduct.id) ? <MdFavorite /> : <MdFavoriteBorder />}</button>
+            <button style={{border: 'none', cursor: 'pointer', fontSize: '17px'}} onClick={() => handleFavoritesProduct(dailyproduct)}>{isFavorite(dailyproduct.id) ? <MdFavorite style={{color: '#006f1c'}} /> : <MdFavoriteBorder />}</button>
             <div className="btn">
               <button onClick={()=> handleAddToCart(dailyproduct)} disabled={dailyproduct.inStock === 'No'}>Add to Cart</button>
             </div>
