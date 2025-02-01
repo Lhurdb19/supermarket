@@ -35,7 +35,8 @@
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column-reverse;
-      gap: 30px;
+      gap: 20px;
+      padding:80px 0px 20px 0px;
     }
   }
 
@@ -50,7 +51,7 @@
 
   .about-text > h2 {
     font-size: 25px;
-    font-family: MontserratLight;
+    font-family: ProtestStrike;
   }
   .about-text > p {
     font-size: 14px;
@@ -65,12 +66,13 @@
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
-      gap: 10px;
+      gap: 7px;
+      padding: 10px;
     }
   
     .about-text > h2 {
       font-size: 20px;
-      font-family: MontserratLight;
+      font-family: ProtestStrike;
     }
     .about-text > p {
       font-size: 12px;
@@ -85,7 +87,7 @@
   @media screen and (max-width:896px) {
     .about-container > img {
       width: 100%;
-      height: 320px;
+      height: 300px;
       object-fit: cover;
     }
   }
@@ -103,7 +105,7 @@
   @media screen and (max-width:896px) {
     .about-component {
       width: 100%;
-      padding:20px 10px;
+      padding:50px 0px;
     }
   }
 
@@ -149,6 +151,62 @@
     width: 500px;
     height: 350px;
     object-fit: cover;
+  }
+
+  @media screen and (max-width:896px) {
+    .company-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 70px;
+      padding:20px 0;
+    }
+  
+    .company-con {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+    .company-con:nth-child(2) {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .company-text {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 5px;
+      padding: 0 10px;
+    }
+  
+    .company-text > h2 {
+      font-size: 20px;
+      font-family: ProtestStrike;
+    }
+  
+    .company-text > p {
+      font-size: 14px;
+      line-height: 1.6rem;
+      font-family: MontserratLight;
+    }
+  
+    .company-con > img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
   }
   
   .countup-container {
