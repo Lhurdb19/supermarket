@@ -152,14 +152,14 @@ function Navbar() {
                     <Link to="/recentviews">Recent</Link>
                     <Link >Account Management</Link>
                     <Link >Delete Account</Link>
-                    <button >Logout</button>
+                    <button onClick={Logout}>Logout</button>
                   </>
                 ) : (
                   <>
-                    <Link style={NavLink} to="/signin" onClick={() => setIsMobile(false)}>
+                    <Link to="/signin" onClick={() => setIsMobile(false)}>
                       Log in
                     </Link>
-                    <Link style={NavLink} to="/signup" onClick={() => setIsMobile(false)}>
+                    <Link to="/signup" onClick={() => setIsMobile(false)}>
                       Signup
                     </Link>
                   </>
@@ -193,7 +193,7 @@ function Navbar() {
                     <Link to="/recentviews" style={NavLink}>Recent</Link>
                     <Link style={NavLink}>Account Management</Link>
                     <Link style={NavLink}>Delete Account</Link>
-                    <button onClick={Logout} style={NavLink}>Logout</button>
+                    <button onClick={Logout}>Logout</button>
                   </>
                 ) : (
                   <>

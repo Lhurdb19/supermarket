@@ -381,7 +381,44 @@
     font-family: MontserratLight;
     font-size: 6px;
   }
+  
+  @media screen and (max-width:896px) {
+    .stex-box > a > img {
+      width: 100%;
+    }
+    .stex-box > a > h4 {
+      width: 100%;
+    }
+    .email-box > a > img {
+      width: 100%;
+    }
+    .email-box > a > h4 {
+      width: 100%;
+    }
+    .jumia-box > a > img {
+      width: 100%;
+    }
+    .jumia-box > a > h4 {
+      width: 100%;
+    }
+    .konga-box > a > img {
+      width: 100%;
+    }
+    .konga-box > a > h4 {
+      width: 100%;
+    }
+  }
 
+  
+  .contact-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  
   .contact-info > a {
     width: 20px;
     height: 20px;
@@ -394,6 +431,25 @@
     height: 20px;
     object-fit: cover;
   }
+
+  @media screen and (max-width:896px) {
+    .contact-info {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+    }
+  
+    .contact-info > a {
+      width: 20px;
+      height: 20px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+  }
+  
 
   .partner-container {
     width: 100%;
@@ -422,56 +478,25 @@
   }
 
   @media screen and (max-width:896px) {
-    .more-partner {
+    .partner-container {
       width: 100%;
-      display: flex;;
-      flex-direction: column;
-      gap: 30px;
-      margin-top: 20px;
+      display: flex;
+      padding: 20px 0;
+      gap: 10px;
     }
-  
+    .partner-container > h2 {
+      font-size: 14px;
+    }
     .partner-card {
       width: 100%;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: flex-start;
       gap: 15px;
     }
   
     .partner-card > img {
       width: 30px;
-      height: 20px;
-      object-fit: cover;
-    }
-  }
-
-  .contact-info {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 15px;
-  }
-
-
-  @media screen and (max-width:896px) {
-    .contact-info {
-      width: 100%;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 18px;
-    }
-  
-    .contact-info > a {
-      width: 20px;
-      height: 20px;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-    }
-    .contact-info > a > img {
-      width: 20px;
       height: 20px;
       object-fit: cover;
     }
