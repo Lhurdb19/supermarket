@@ -11,11 +11,11 @@ import { CartContext } from "../CartContext/cartContext";
 import { AuthContext } from "../ContentApi/AuthContextApi";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
-import "./Navbar.css";
 import Logo from "../Spinner/Logo";
 import Mobilemenu from "./mobilemenu";
 import { foodStuff } from "../Jsons/foodstuff";
 import { bestProducts } from "../Jsons/bestProduct";
+import "./Navbar.css";
 
 function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
@@ -87,7 +87,7 @@ function Navbar() {
                 </Link>
               ))
             ) : (
-              <p>No item found with the specified name!</p>
+              <p></p>
             )}
           </div>
         </div>
@@ -251,7 +251,7 @@ function Navbar() {
           )}
         </div>
 
-        <div className={`nav-link ${isMobile ? "mobile active" : ""}`}>
+        <div className={`nav-link ${isMobile ? "mobile active" : ""}`} onClick={() => setIsMobile(!isMobile)}>
           <div className="nav-link-container">
             <Link to="/about" onClick={() => setIsMobile(!isMobile)} style={NavLink}>
               About
@@ -274,11 +274,11 @@ function Navbar() {
           </div>
 
           <div className="modal">
-            <Mobilemenu />
+            <Mobilemenu  />
           </div>
         </div>
 
-        <div className="mobile-search">
+        <div className="mobile-search" >
           <input
             type="text"
             placeholder="Search..."

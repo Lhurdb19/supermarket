@@ -28,10 +28,10 @@ export default function Mobilemenu() {
           {mobileMenu && (
             <div className="menu-info">
               
-              <Link to="/about" onClick={() => setIsMobile(!isMobile)}>
+              <Link to="/about" onClick={() => setIsMobile(false)}>
                 About
               </Link>
-              <Link to="/shop" onClick={() => setIsMobile(!isMobile)}>
+              <Link to="/shop" onClick={() => setIsMobile(false)}>
                 Shop
               </Link>
               <Link to="/provision" onClick={() => setIsMobile(!isMobile)}>
@@ -50,7 +50,7 @@ export default function Mobilemenu() {
           )}
           {mobileCategory && (
             <div className="menu-info">
-              <Link to="/beveragies" onClick={() => setIsMobile(!isMobile)}>
+              <Link to="/beveragies" onClick={() => setIsMobile(false)}>
                 Beveragies
               </Link>
               <Link to="/foodstuff" onClick={() => setIsMobile(false)}>

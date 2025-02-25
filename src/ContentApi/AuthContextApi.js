@@ -1,8 +1,5 @@
 import { createContext, useCallback, useEffect, useState } from "react";
 
-
-
-
 export const AuthContext = createContext({
   isLoggedIn: false,
   Login: () => {},

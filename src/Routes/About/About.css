@@ -80,8 +80,8 @@
   }
 
   .about-container > img {
-    width: 60%;
-    height: 320px;
+    width: 100%;
+    height: 450px;
     object-fit: cover;
   }
   @media screen and (max-width:896px) {
@@ -124,7 +124,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 40px;
+    gap: 50px;
   }
 
   .company-text {
@@ -142,14 +142,14 @@
   }
 
   .company-text > p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.6rem;
     font-family: MontserratLight;
   }
 
   .company-con > img {
-    width: 500px;
-    height: 350px;
+    width: 100%;
+    height: 450px;
     object-fit: cover;
   }
 
